@@ -1,4 +1,4 @@
-//SIMPLE APP ALLOWING USER TO DRAW ON CANVAS WITH VANILLA JS ONLY
+/*SIMPLE APP ALLOWING USER TO DRAW ON CANVAS WITH VANILLA JS ONLY*/
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -9,22 +9,22 @@ ctx.lineCap = 'round';
 ctx.lineWidth = 100;
 
 
-//SETTING THE START AND ENDPOINT OF LINE
+/*SETTING THE START AND ENDPOINT OF LINE*/
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
 let hue = 0;
 let direction = true;
 
-//DRAW FUNCTION WILL BE CALLED WHENEVER MOUSE IS MOVED ON TOP OF CANVAS
+/*DRAW FUNCTION WILL BE CALLED WHENEVER MOUSE IS MOVED ON TOP OF CANVAS*/
 function draw(e){
-    if(!isDrawing) return;//STOPS THE FUNCTION FROM RUNNING
+    if(!isDrawing) return;/*STOPS THE FUNCTION FROM RUNNING*/
     console.log(e);
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     ctx.beginPath();
-    //START FROM 
+    /*START FROM */
     ctx.moveTo(lastX, lastY);
-    //GO TO
+    /*GO TO*/
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
     [lastX, lastY] = [e.offsetX, e.offsetY];
