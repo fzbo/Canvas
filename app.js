@@ -7,7 +7,7 @@ ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 100;
-ctx.globalCompositeOperation = 'multiply';
+
 
 //SETTING THE START AND ENDPOINT OF LINE
 let isDrawing = false;
